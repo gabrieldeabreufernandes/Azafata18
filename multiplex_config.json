@@ -1,0 +1,59 @@
+{
+	"bgColor":"#FF4081",
+	"topBar":{
+		"bgColor":"#FF0000",
+		"logoList":[
+			"/mnt/extsd/multiplex/actia.png",
+			"/mnt/extsd/multiplex/irizar.png"
+		]
+	},
+	"buttonArea":{
+		"bgColor":"#00FF00",
+		"titleColor":"#00FF00",
+		"title1":"Conforto AAA",
+		"title2":"Iluminação AAA",
+		"buttonList":[
+			{
+				"type":1,
+				"path":"/mnt/extsd/multiplex/wifi.png"
+			},
+			{
+				"type":2,
+				"path":"/mnt/extsd/multiplex/wc.png"
+			}
+		]
+	},
+	"bottomArea":{
+		"bgColor":"#FF0000",
+		"messageColor":"#00FF00",
+		"alertColor":"#0000FF",
+		"errorColor":"#FF0000"
+	},
+	"button":{
+		"disableColor1":"#0000FF",
+		"disableColor2":"#0000FF",
+		"normalColor1":"#FF4081",
+		"normalColor2":"#FF4081",
+		"state1Color1":"#6A1B9A",
+		"state1Color2":"#4A148C",
+		"state2Color1":"#80D8FF",
+		"state2Color2":"#0091EA",
+		"pressColor1":"#4CAF50",
+		"pressColor2":"#1B5E20"
+	},
+	"chromo":{
+		"bgColor":"#FFFFFF",
+		"title":"Chromotherapy AAA",
+		"titleColor":"#8D6E63",
+		"blue":"#00FF00",
+		"yellow":"#00FF00",
+		"cyan":"#00FF00",
+		"red":"#00FF00",
+		"purple":"#00FF00",
+		"orange":"#00FF00",
+		"green":"#00FF00",
+		"pink":"#00FF00",
+		"whiteGreen":"#00FF00"
+	}
+
+}

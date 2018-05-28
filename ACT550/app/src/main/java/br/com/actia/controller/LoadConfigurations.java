@@ -19,6 +19,7 @@ public class LoadConfigurations {
     private static String DEFAULT_FILE_CONFIG = "/act5xx/act5xx_config.json";
 
     public FileStructure getFileStructure() {
+        Log.d(TAG, "getFileStructure Runnig...");
         String jsonStr = getFileString();
         Gson gson = new Gson();
 
@@ -28,12 +29,19 @@ public class LoadConfigurations {
         return fileStructure;
     }
 
-
     private String getFileString() {
+        Log.d(TAG, "getFileString Runnig...");
         File externalStorageDirectory = new File("/mnt/extsd/");
+        //File internalStorageDirectory = new File("/mnt/sdcard/");
+        //if(internalStorageDirectory.exists()){
+        if(externalStorageDirectory.exists()){
+            Log.d(TAG, "Internal directory is /mnt/sdcard/");
+        }else{
+            Log.d(TAG, "Internal directory wrong!!!");
+        }
         //File externalStorageDirectory = new File("/mnt/sdcard/act500/");
         File file = new File(externalStorageDirectory.getAbsoluteFile() + DEFAULT_FILE_CONFIG);
-
+        //File file = new File(internalStorageDirectory.getAbsoluteFile() + DEFAULT_FILE_CONFIG);
         Log.d(TAG, file.getAbsolutePath());
 
         if(!file.exists()) {

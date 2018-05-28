@@ -91,16 +91,15 @@ public class Interface extends Activity implements View.OnClickListener {
 
         menuInitialize();
 
-        Log.v(TAG, "Starting LoadConfigurations()");
         LoadConfigurations loader = new LoadConfigurations();
         FileStructure fileStructure = loader.getFileStructure();
 
         if(fileStructure != null) {
-            Log.v(TAG, "fileStructure FOUND");
+            Log.d(TAG, "fileStructure Fouded");
             setConfigurations(fileStructure);
         }
         else {
-            Log.v(TAG, "fileStructure == NULL");
+            Log.d(TAG, "fileStructure == NULL");
         }
 
         globals = Globals.getInstance(this);
@@ -662,10 +661,12 @@ public class Interface extends Activity implements View.OnClickListener {
     //CONFIGURATIONS
     //##############################################################################################
     private void setConfigurations(FileStructure fileStructure) {
+        Log.d(TAG, "setConfigurations Running...");
         Log.v(TAG, "###" + fileStructure.toString());
 
         try {
             //Set TOP BAR CONFIGURATIONS
+            Log.d(TAG, "Set top bar configurations");
             AppTopBar topBar = fileStructure.getTopBar();
 
             if (topBar != null) {
@@ -677,10 +678,11 @@ public class Interface extends Activity implements View.OnClickListener {
                 View separator = (View) findViewById(R.id.separator);
 
                 //Remove all default views
-                brandArea.removeAllViews();
+                //brandArea.removeAllViews();
 
                 //TopBar background color
                 brandArea.setBackgroundColor(Color.parseColor(topBar.getBgColor()));
+
                 tvArea1.setBackgroundColor(Color.parseColor(topBar.getBgColor()));
                 tvArea2.setBackgroundColor(Color.parseColor(topBar.getBgColor()));
                 separator.setBackgroundColor(Color.parseColor(topBar.getBgColor()));
@@ -691,6 +693,8 @@ public class Interface extends Activity implements View.OnClickListener {
                 List<String> logoList = topBar.getLogoList();
 
                 for (int i = 0; i < logoList.size(); i++) {
+                    Log.d(TAG,"logoList[%d]"+ i);
+
                     ImageView imageView = new ImageView(getApplicationContext());
                     Bitmap bmp = BitmapFactory.decodeFile(logoList.get(i));
 
@@ -718,7 +722,7 @@ public class Interface extends Activity implements View.OnClickListener {
 
                 ibExecSd.setBackground(makeSelector(Color.parseColor(fileStructure.getMenuBar().getBtnPressed()),
                         Color.parseColor(fileStructure.getMenuBar().getBtnSelected()), Color.parseColor(fileStructure.getMenuBar().getBtnNormal())));
-                ibExecSd.setBackground(makeSelector(Color.parseColor(fileStructure.getMenuBar().getBtnPressed()),
+                ibExecUsb.setBackground(makeSelector(Color.parseColor(fileStructure.getMenuBar().getBtnPressed()),
                         Color.parseColor(fileStructure.getMenuBar().getBtnSelected()), Color.parseColor(fileStructure.getMenuBar().getBtnNormal())));
                 ibExecRadio.setBackground(makeSelector(Color.parseColor(fileStructure.getMenuBar().getBtnPressed()),
                         Color.parseColor(fileStructure.getMenuBar().getBtnSelected()), Color.parseColor(fileStructure.getMenuBar().getBtnNormal())));
@@ -759,6 +763,8 @@ public class Interface extends Activity implements View.OnClickListener {
     }
 
     public StateListDrawable makeSelector(int pressedColor, int selectedColor, int normalColor) {
+        Log.d(TAG,"makeSelector running...");
+
         StateListDrawable res = new StateListDrawable();
 
         res.addState(new int[]{android.R.attr.state_pressed}, new ColorDrawable(pressedColor));

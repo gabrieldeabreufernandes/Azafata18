@@ -151,7 +151,7 @@
     <LinearLayout
         android:id="@+id/topBrandArea"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center_horizontal|top">
 
@@ -164,6 +164,7 @@
             android:src="@drawable/company_logo"
             android:id="@+id/imageView" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/bottomPoweredBy"
         android:layout_width="wrap_content"

@@ -1,0 +1,33 @@
+{
+  "bgColor": "#55000000",
+  "topBar":{
+    "bgColor": "#55000000",
+    "logoList":["logo1","logo2"],
+    "area1TextColor":"#55000000",
+    "area2TextColor":"#55000000",
+    "area1Text":"V.I.P.",
+    "area2Text":"EXEC"
+  },
+  "menuBar":{
+    "bgColor": "#55000000",
+    "btnDisabled": "#55000000",
+    "btnNormal": "#55000000",
+    "btnPressed": "#55000000",
+    "btnSelected": "#55000000"
+  },
+  "workArea":{
+    "bgColor": "#55000000",
+    "titleColor": "#55000000",
+    "subTitleColor": "#55000000",
+    "normalTextColor": "#55000000",
+    "radioTitle": "RADIO_t",
+    "usbTitle": "USB_t",
+    "diskTitle": "DISK_t",
+    "auxTitle": "AUX_t",
+    "configTitle": "CONFIG_t"
+  },
+  "bottomArea":{
+    "bgColor": "#55000000",
+    "logoList":["logo1","logo2"]
+  }
+}
